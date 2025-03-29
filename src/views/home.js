@@ -58,7 +58,7 @@ function homwPageTemplate(){
                 <a href="#" class="btn">Научете повече</a>
             </div>
             <div class="help-us-image">
-           
+    
             </div>
         </div>
     </div>

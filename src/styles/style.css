@@ -264,7 +264,7 @@ nav ul li a {
 
 /* Стил за изображението */
 .about-image {
-  background-image: url("../images/AU_1\ \(1\).jpg");
+  background-image: url("/images/girlWithDog.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -375,7 +375,7 @@ nav ul li a {
 .help-us-image {
   flex: 1;
   height: 300px; 
-  background-image: url('../images/rs=h_1000\,cg_true\,m.webp'); 
+  background-image: url('/images/helpDog.webp'); 
   background-size: cover; 
   background-position: center; 
   border-radius: 8px;
