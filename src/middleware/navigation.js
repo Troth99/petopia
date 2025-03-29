@@ -3,14 +3,15 @@ import { getUserFromLocalStorage } from "../utils/utils.js";
 import { showHideCategories } from "./showHideCategories.js";
 
 
+
 document.addEventListener('DOMContentLoaded', showHideCategories);
 
 export default function showNavigation(ctx, next) {
     const user = getUserFromLocalStorage()
     let userId;
 
-    if(user){
-       userId = user.uid
+    if (user) {
+        userId = user.uid
     }
     render(navigationTemplate(userId), headerEl)
 
@@ -20,13 +21,13 @@ export default function showNavigation(ctx, next) {
 function loggedInUser() {
     return html`
       <li><a href="/profile" id="profile-link">
-                    <img src="/images/8792047.png" alt="Моят профил">
+       <span class="profile-icon"></span>
                 </a></li>
     `
 }
 
-function guest(){
-    return html `
+function guest() {
+    return html`
     
     <li><a href="/register" id="register-link">Регистрация</a></li>
     <li><a href="/login" id="login-link">Вход</a></li>
@@ -39,7 +40,7 @@ function navigationTemplate(userId) {
         <!-- Лого -->
         <div class="logo">
             <a href="/">
-                <img src="/images/logo.jpeg" alt="Pettopia Logo">
+            <span class="sr-only">Pettopia Logo</span>
             </a>
         </div>
 
