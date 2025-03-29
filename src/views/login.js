@@ -13,18 +13,18 @@ function loginTemplate() {
     return html`
 
   <div class="login-container">
-    <h2>Login</h2>
+    <h2>Влез в светът на домашните любимци!</h2>
     <form action="#" method="POST" class="login-form" @submit=${loginSubmitHandler}>
       <div class="input-group">
         <label for="email">Email</label>
         <input type="text" id="email" name="email" placeholder="Enter your email" required>
       </div>
       <div class="input-group">
-        <label for="password">Password</label>
+        <label for="password">Парола</label>
         <input type="password" id="password" name="password" placeholder="Enter your password" required>
       </div>
-      <button type="submit" class="submit-btn">Login</button>
-      <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+      <button type="submit" class="submit-btn">Влез 🐾</button>
+      <p class="signup-link">Нямаш профил? <a href="#">Регистрация</a></p>
     </form>
   </div>
     `
@@ -41,6 +41,9 @@ async function loginSubmitHandler(e){
 
     try {
         const userCredentials = await signInWithEmailAndPassword(auth, email, password)
+        const user = userCredentials.user;
+        localStorage.setItem('firebase.user', JSON.stringify(user));
+        page.redirect('/')
         console.log(userCredentials)
     } catch (error) {
         console.error(error.message)
