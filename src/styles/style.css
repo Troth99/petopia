@@ -1,119 +1,513 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 header {
-    background-color: #0073e6;
-    padding: 1em;
-    color: white;
-    text-align: center;
+  position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* За да е над останалото съдържание */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
+  margin-right: 20px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
-h1, h2 {
-    color: #333;
+h1,
+h2 {
+  color: #333;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+  position: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000;
 }
 
-  /* Стилове за контейнера на формата */
-  .login-container {
-    background-color: white;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+/* Стилове за контейнера на формата */
+.login-container {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* Заглавие на формата */
+
+/* Стилове за входните полета */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Фокус на входните полета */
+.input-group input:focus {
+  border-color: #4caf50;
+}
+
+/* Стилове за бутона за вход */
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Линк за регистрация */
+.signup-link {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Основни стилове */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Хедър */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 5%;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero секция */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #f5f5f5;
+  background-image: url("../images/puppy-1903313_1280-864x380.jpg"); /* добави тук пътя към изображението, ако има такова */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: 70vh;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 50%;
+  font-family: "Arial", sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.hero-text p {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.btn {
+  background-color: #ff8c00;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fdc98a;
+}
+
+.hero-image {
+  width: 100%; /* за да запълни цялата ширина на родителския елемент */
+  height: auto; /* запази пропорциите на изображението */
+  object-fit: cover; /* изображението ще запълни целия контейнер, без да се изкривява */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
     text-align: center;
   }
-  
-  /* Заглавие на формата */
-  h2 {
-    margin-bottom: 20px;
-    color: #333;
+
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 30px;
   }
-  
-  /* Стилове за входните полета */
-  .input-group {
-    margin-bottom: 15px;
-    text-align: left;
-  }
-  
-  .input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .input-group input {
+
+  .hero-image {
     width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    box-sizing: border-box;
+    height: 300px;
+    margin-top: 20px;
   }
-  
-  /* Фокус на входните полета */
-  .input-group input:focus {
-    border-color: #4CAF50;
+}
+
+
+
+
+.about {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Разстояние между изображението и текста */
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стил за изображението */
+.about-image {
+  background-image: url("../images/AU_1\ \(1\).jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px; /* Или друга височина по избор */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стил за текстовия блок */
+.about-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Общи стилове за секцията */
+.adoption-steps {
+  background-color: #f9f9f9;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.adoption-steps h2 {
+  font-size: 2.5rem;
+  color: #333; /* Тъмен текст за заглавието */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.adoption-steps ol {
+  list-style-type: none; /* Премахваме стандартните маркери */
+  padding: 0;
+}
+
+.adoption-steps li {
+  font-size: 1.2rem;
+  color: #555;
+  background-color: #f3efc9;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(112, 101, 101, 0.1);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.adoption-steps li:hover {
+  transform: translateY(-10px); /* Малко повдигане при hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Сянката става по-голяма при hover */
+}
+
+.adoption-steps .step-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4caf50; /* Зелен цвят за номера */
+  margin-right: 20px; /* Разстояние между номера и текста */
+}
+
+@media (min-width: 768px) {
+  /* За по-големи екрани (например таблети и десктопи) */
+  .adoption-steps ol {
+    display: flex;
+    flex-wrap: wrap; /* Подреждаме стъпките в няколко колони */
+    justify-content: center; /* Центрираме стъпките */
   }
-  
-  /* Стилове за бутона за вход */
-  .submit-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
+
+  .adoption-steps li {
+    width: 30%; /* Всеки елемент ще заема 45% от ширината на родителя */
+    margin: 20px; /* Отстояние между стъпките */
   }
-  
-  .submit-btn:hover {
-    background-color: #45a049;
+}
+
+/* Стил за секцията "Как можем да помогнем?" */
+.help-us {
+  padding: 60px 0;
+  background-color: #f9f9f9; /* Светъл фон */
+}
+
+
+.help-us h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.help-us-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.help-us-image {
+  flex: 1;
+  height: 300px; 
+  background-image: url('../images/rs=h_1000\,cg_true\,m.webp'); 
+  background-size: cover; 
+  background-position: center; 
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.help-us-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.help-us-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+.help-us ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.help-us li {
+  font-size: 1.2rem;
+  color: #555;
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стил за бутона */
+.help-us .btn {
+  display: inline-block;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.help-us .btn:hover {
+  background-color: #388e3c; /* По-тъмен зелен при hover */
+}
+
+/* Адаптивност за мобилни устройства */
+@media (max-width: 768px) {
+  .help-us-content {
+    flex-direction: column; /* На малки екрани подреждаме съдържанието вертикално */
+    text-align: center; /* Центрираме текста */
   }
-  
-  /* Линк за регистрация */
-  .signup-link {
-    margin-top: 10px;
-    font-size: 14px;
+
+  .help-us-text {
+    padding-right: 0; /* Премахваме разстоянието отдясно при мобилни устройства */
   }
-  
-  .signup-link a {
-    color: #4CAF50;
-    text-decoration: none;
+
+  .help-us h2 {
+    font-size: 2rem; /* Намаляваме размера на шрифта за заглавието */
   }
-  
-  .signup-link a:hover {
-    text-decoration: underline;
+}
+
+/* Стил за секцията "Често задавани въпроси" */
+.faq {
+  padding: 60px 0;
+  background-color: #f4f4f9;
+}
+
+/* Заглавие на секцията */
+.faq h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Списък за често задавани въпроси */
+.faq dl {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Въпроси (dt) */
+.faq dt {
+  font-size: 20px;
+  color: #2C3E50;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* При hover върху въпрос */
+.faq dt:hover {
+  color: #4CAF50;
+}
+
+/* Отговори (dd) */
+.faq dd {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  border-left: 3px solid #4CAF50;
+  line-height: 1.6;
+}
+
+/* Адаптивност за мобилни устройства */
+@media (max-width: 768px) {
+  .faq h2 {
+      font-size: 28px;
   }
-  
+
+  .faq dl {
+      padding: 15px;
+  }
+
+  .faq dt {
+      font-size: 18px;
+  }
+
+  .faq dd {
+      font-size: 15px;
+  }
+}
+
