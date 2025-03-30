@@ -24,7 +24,7 @@ function loginTemplate() {
         <input type="password" id="password" name="password" placeholder="Enter your password" required>
       </div>
       <button type="submit" class="submit-btn">Влез 🐾</button>
-      <p class="signup-link">Нямаш профил? <a href="#">Регистрация</a></p>
+      <p class="signup-link">Нямаш профил? <a href="/register">Регистрация</a></p>
     </form>
   </div>
     `
