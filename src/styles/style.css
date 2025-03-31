@@ -282,7 +282,7 @@ footer {
 
 /* Група за входните полета */
 .input-group {
-  text-align: left;
+  text-align: center;
   margin-bottom: 25px; /* Увеличаваме разстоянието между полетата */
 }
 
@@ -294,7 +294,7 @@ footer {
 }
 
 .input-group input {
-  width: 100%;
+  width: 90%;
   padding: 15px; /* Увеличаваме падинга на полетата */
   font-size: 18px; /* Увеличаваме размера на текста в полетата */
   border: 1px solid #ccc;
@@ -304,6 +304,7 @@ footer {
   background-color: rgba(27, 26, 26, 0.5);
   caret-color: white;
   color: white;
+  
 }
 
 /* Фокус върху полетата при натискане */
@@ -755,13 +756,10 @@ body {
 
 /* Текстови полета */
 .register-form input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.8);
+  color: rgb(240, 229, 229); /* Черен текст */
+  border: 3px solid black; /* Черна рамка */
 }
+
 
 /* Бутон */
 .register-btn {
@@ -780,3 +778,27 @@ body {
   background-color: #e67000;
 }
 
+.password-container {
+  display: flex;
+  flex-direction: column; /* Подрежда елементите вертикално */
+  align-items: center; /* Центрира бутонa по хоризонтала */
+  width: 100%;
+  gap: 10px; /* Добавя разстояние между полето и бутона */
+}
+
+
+.password-container button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  margin-top: 5px; /* Премества бутона надолу */
+}
+
+.password-container button:hover {
+  background-color: #f80b0b;
+}
