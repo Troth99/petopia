@@ -10,7 +10,28 @@ import { registerHandler } from "../services/registrationAuthntication.js";
 
 export default function showRegister() {
     render(registrationTemplate(), mainEl);
+
+
+    const confirmPwEL = document.getElementById('toggleConfirmPassword');
+    if (confirmPwEL) {
+        console.log('Бутонът toggleConfirmPassword е намерен.');
+
+        confirmPwEL.addEventListener('click', () => {
+            let confirmPwType = document.getElementById('confirm-password');
+            let normalPwEl = document.getElementById('password');
+
+            if (normalPwEl && confirmPwType) {
+                normalPwEl.type = normalPwEl.type === 'password' ? 'text' : 'password';
+                confirmPwType.type = confirmPwType.type === 'password' ? 'text' : 'password';
+            } else {
+            }
+        });
+    } else {
+
+    }
 }
+
+
 
 function registrationTemplate() {
     return html`
@@ -53,18 +74,4 @@ function registrationTemplate() {
 
 
 // export const errorMessage = document.getElementById("error-message");
-
-document.addEventListener('DOMContentLoaded', function () {
-    const confirmPwEL = document.getElementById('toggleConfirmPassword')
-
-    if (confirmPwEL) {
-
-        confirmPwEL.addEventListener('click', () => {
-            let confirmPwType = document.getElementById('confirm-password')
-            let normalPwEl = document.getElementById('password')
-            normalPwEl.type = normalPwEl.type === 'password' ? 'text' : 'password'
-            confirmPwType.type = confirmPwType.type === 'password' ? 'text' : 'password'
-        })
-    }
-})
 

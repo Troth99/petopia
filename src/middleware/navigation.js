@@ -1,11 +1,15 @@
 import { headerEl, render, html } from "../constants/constants.js";
 import { getUserFromLocalStorage } from "../utils/utils.js";
-import { showHideCategories } from "./showHideCategories.js";
+import { showHideCategories, } from "./showHideCategories.js";
+import { setupDropdown } from "./showHideMenu.js";
 
 
 
-document.addEventListener('DOMContentLoaded', showHideCategories);
-
+document.addEventListener('DOMContentLoaded', function () {
+    showHideCategories();
+    setupDropdown();
+   
+});
 export default function showNavigation(ctx, next) {
     const user = getUserFromLocalStorage()
     let userId;
@@ -14,15 +18,28 @@ export default function showNavigation(ctx, next) {
         userId = user.uid
     }
     render(navigationTemplate(userId), headerEl)
-
+    setupDropdown();
+   
     next()
 }
 
 function loggedInUser() {
     return html`
-      <li><a href="/profile" id="profile-link">
-       <span class="profile-icon"></span>
-                </a></li>
+<li class="relative">
+<span id="profile-link" class="profile-link-btn">
+    <span class="profile-icon"></span>
+</span>
+  <div class="dropdown-content-menu">
+    <div class="dropdown-item"><a href="/profile">Моят профил</a></div>
+    <div class="dropdown-item"><a href="/settings">Настройки</a></div>
+    <div class="dropdown-item"><a href="/settings">Преглед на покупките</a></div>
+    <div class="dropdown-item"><a href="/settings">Поддръжка</a></div>
+    <div class="dropdown-item"><a href="/settings">Сменяне на парола</a></div>
+    <div class="dropdown-item"><a href="/settings">Връщане на домашен любимец</a></div>
+    <div class="dropdown-item"><a href="/logout">Изход</a></div>
+  </div>
+</li>
+                
     `
 }
 

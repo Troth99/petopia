@@ -1,4 +1,5 @@
 import { mainEl ,render, html} from "../constants/constants.js";
+import { setupDropdown } from "../middleware/showHideMenu.js";
 
 
 export function showHomePage(){

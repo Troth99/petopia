@@ -21,39 +21,7 @@ body {
 }
 
 /* Стил за профилната икона */
-#profile-link {
-  display: block;
-  width: 50px;  
-  height: 50px;
-  background-image: url('../images/userIcon.jpg'); 
-  background-size: cover; 
-  background-position: center; 
-  border-radius: 50%; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
 
-/* Hover ефект */
-#profile-link:hover {
-  transform: scale(1.1); 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-}
-
-/* Стил за image в <a> */
-#profile-link img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  border-radius: 50%; 
-}
-.profile-icon {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url('/images/userIcon.jpg');
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
-}
 /* Лого */
 .logo img {
   height: auto; 
@@ -802,3 +770,76 @@ body {
 .password-container button:hover {
   background-color: #f80b0b;
 }
+
+#profile-link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/userIcon.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  border-radius: 50%; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Hover ефект */
+#profile-link:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Стил за image в <a> */
+#profile-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 50%; 
+}
+
+.profile-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/userIcon.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+/* Стил за самото меню */
+.relative {
+  position: relative;
+}
+
+/* Скриване на падащото меню по подразбиране */
+.dropdown-content-menu {
+  display: none; /* Скриваме менюто по подразбиране */
+  position: absolute;
+  top: 60px;
+  left: -40px;
+  background-color: rgb(41, 40, 40);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 200px;
+}
+
+/* Стил за елементите в падащото меню */
+.dropdown-item a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-item a:hover {
+  background-color: #111111;
+}
+
+/* Показване на падащото меню при активиране */
+.relative.show-menu .dropdown-content-menu {
+  display: block !important;
+}
+
