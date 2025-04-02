@@ -1,6 +1,8 @@
 import { updateProfile, updateEmail, updatePassword, reauthenticateWithCredential, EmailAuthProvider } from "firebase/auth";
 import { auth } from "../config/firebaseInit.js";
 import { page } from "../constants/constants.js";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "../config/firebaseInit.js";
 
 export async function updateUserProfile({ displayName, email, phone, password, currentPassword }) {
     const user = auth.currentUser;
@@ -10,28 +12,34 @@ export async function updateUserProfile({ displayName, email, phone, password, c
     }
 
     try {
-        // Повторно удостоверяване
+  
         if (currentPassword) {
             const credential = EmailAuthProvider.credential(user.email, currentPassword);
             await reauthenticateWithCredential(user, credential);
         }
 
-        // Актуализиране на displayName
+    
         if (displayName) {
             await updateProfile(user, { displayName });
         }
 
-        // Актуализиране на email
+     
         if (email && email !== user.email) {
             await updateEmail(user, email);
         }
 
-        // Актуализиране на парола
+    
         if (password) {
             await updatePassword(user, password);
         }
 
-        // Актуализиране на телефонния номер (само в localStorage)
+        const userDocRef = doc(db, "users", user.uid);
+        await updateDoc(userDocRef, {
+            displayName: displayName || user.displayName,
+            email: email || user.email,
+            phone: phone || "", // Актуализиране на телефона
+        });
+      
         const storedUser = JSON.parse(localStorage.getItem("firebase.user")) || {};
         const updatedUser = {
             ...storedUser,

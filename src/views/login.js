@@ -1,6 +1,9 @@
 import { signInWithEmailAndPassword } from "@firebase/auth"
 import { render, html, page, mainEl } from "../constants/constants.js"
-import { auth } from "../config/firebaseInit.js"
+import { doc, getDoc } from "firebase/firestore"; // Импортирайте Firestore
+import { auth } from "../config/firebaseInit.js";
+import { db } from "../config/firebaseInit.js";
+import { getUserFromLocalStorage } from "../utils/utils.js"
 
 
 export default function loginView() {
@@ -43,7 +46,26 @@ async function loginSubmitHandler(e) {
   try {
     const userCredentials = await signInWithEmailAndPassword(auth, email, password)
     const user = userCredentials.user;
-    localStorage.setItem('firebase.user', JSON.stringify(user));
+
+    const userDocRef = doc(db, "users", user.uid);
+    const userDoc = await getDoc(userDocRef);
+
+    let phone = "";
+    if (userDoc.exists()) {
+        phone = userDoc.data().phone || ""; // Вземете телефона от Firestore
+    } else {
+        console.warn("Документът за потребителя не съществува в Firestore.");
+    }
+
+     localStorage.setItem("firebase.user", JSON.stringify({
+            email: user.email,
+            displayName: user.displayName || "",
+            phone: phone, // Добавяне на телефона
+            uid: user.uid,
+            creationTime: user.metadata.creationTime,
+            lastSignInTime: user.metadata.lastSignInTime
+        }));
+
     page.redirect('/')
   } catch (error) {
     console.error("Грешка при вход:", error.message);

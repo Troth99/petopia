@@ -1,6 +1,8 @@
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { mainEl, render, html, page } from "../constants/constants.js"
 import { auth } from "../config/firebaseInit.js"
+import { doc, setDoc } from "firebase/firestore"; 
+import { db } from "../config/firebaseInit.js"
 
 export async function registerHandler(e) {
     e.preventDefault()
@@ -43,13 +45,16 @@ export async function registerHandler(e) {
             });
 
             console.log("Регистрация успешна!", user);
+
+            await saveUserToFirestore(user.uid, username, email, phoneNumber);
+
             localStorage.setItem('firebase.user', JSON.stringify({
                 email: user.email,
                 displayName: user.displayName,
                 phone: phoneNumber, 
                 uid: user.uid,
-                creationTime: user.metadata.creationTime, // Дата на регистрация
-                lastSignInTime: user.metadata.lastSignInTime // Последно влизане
+                creationTime: user.metadata.creationTime, 
+                lastSignInTime: user.metadata.lastSignInTime 
             }));
             page.redirect('/');
 
@@ -79,4 +84,19 @@ export async function registerHandler(e) {
         }
     }
     registerUser(email, password, username, phoneNumber);
+}
+
+async function saveUserToFirestore(userId, username, email, phone) {
+    try {
+        const userDocRef = doc(db, "users", userId);
+        await setDoc(userDocRef, {
+            displayName: username,
+            email: email,
+            phone: phone,
+            createdAt: new Date().toISOString(),
+        });
+        console.log("Потребителските данни са съхранени успешно в Firestore.");
+    } catch (error) {
+        console.error("Грешка при съхраняване на потребителските данни в Firestore:", error.message);
+    }
 }

@@ -12,12 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 export default function showNavigation(ctx, next) {
     const user = getUserFromLocalStorage()
-    let userId;
-
-    if (user) {
-        userId = user.uid
-    }
-    render(navigationTemplate(userId), headerEl)
+  
+    render(navigationTemplate(user), headerEl)
     setupDropdown();
    
     next()
@@ -50,7 +46,7 @@ function guest() {
     <li><a href="/login" id="login-link">Вход</a></li>
     `
 }
-function navigationTemplate(userId) {
+function navigationTemplate(user) {
     return html`
 
     <div class="header-container">
@@ -89,7 +85,7 @@ function navigationTemplate(userId) {
 
         <div class="user-actions">
             <ul>
-                ${userId ? loggedInUser() : guest()}
+                ${user ? loggedInUser() : guest()}
             </ul>
         </div>
     </div>
