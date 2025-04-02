@@ -843,3 +843,253 @@ body {
   display: block !important;
 }
 
+
+
+.profile-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.profile-email {
+  font-size: 25px;
+  color: #e0e0e0;
+}
+
+.profile-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.profile-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-info li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.edit-profile-btn {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-profile-btn:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+.profile-sections {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-sections h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.profile-menu li {
+  margin-bottom: 10px;
+  flex: 1 1 calc(50% - 10px);
+  text-align: center;
+}
+
+.profile-menu a {
+  text-decoration: none;
+  color: #4caf50;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-menu a:hover {
+  color: white;
+  background-color: #4caf50;
+  transform: scale(1.05);
+}
+
+/* Адаптивност */
+@media (max-width: 768px) {
+  .profile-menu li {
+      flex: 1 1 100%;
+  }
+
+  .profile-header {
+      padding: 15px;
+  }
+
+  .profile-name {
+      font-size: 24px;
+  }
+
+  .profile-email {
+      font-size: 14px;
+  }
+}
+  .edit-profile-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: #fff;
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    text-align: center;
+    transition: background-color 0.3s ease; 
+}
+
+.edit-profile-link:hover {
+  background-color: #0056b3;
+  color: #e2e2e2; 
+}
+
+.edit-profile-wrapper {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #5f5b5b;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.edit-profile-wrapper h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #030303;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 16px;
+  color: #131212;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #312e2e;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #1f1e1e;
+}
+
+.save-profile-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.save-profile-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+save-profile-btn:active {
+  background-color: #003f8a;
+}
+
+.edit-profile-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+  .edit-profile-wrapper {
+    padding: 20px;
+  }
+
+  .edit-profile-wrapper h2 {
+    font-size: 24px;
+  }
+
+  .save-profile-btn {
+    font-size: 14px;
+  }
+}

@@ -50,6 +50,10 @@ function registrationTemplate() {
                 <input type="email" id="email" name="email" placeholder="Въведи своя email" required>
             </div>
             <div class="input-group">
+        <label for="phone">Телефонен номер</label>
+        <input type="tel" id="phone" name="phone" placeholder="Въведи телефонен номер" required>
+            </div>
+            <div class="input-group">
              <label for="password">Парола</label>
                  <div class="password-container">
                  <input type="password" id="password" name="password" placeholder="Въведи парола" required>

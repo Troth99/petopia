@@ -32,7 +32,7 @@ function loggedInUser() {
   <div class="dropdown-content-menu">
     <div class="dropdown-item"><a href="/profile">Моят профил</a></div>
     <div class="dropdown-item"><a href="/settings">Настройки</a></div>
-    <div class="dropdown-item"><a href="/settings">Преглед на покупките</a></div>
+    <div class="dropdown-item"><a href="/settings">Преглед на домашните любимци</a></div>
     <div class="dropdown-item"><a href="/settings">Поддръжка</a></div>
     <div class="dropdown-item"><a href="/settings">Сменяне на парола</a></div>
     <div class="dropdown-item"><a href="/settings">Връщане на домашен любимец</a></div>

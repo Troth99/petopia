@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { mainEl, render, html, page } from "../constants/constants.js"
 import { auth } from "../config/firebaseInit.js"
 
@@ -10,16 +10,16 @@ export async function registerHandler(e) {
 
     const username = entries.username
     const email = entries.email;
+    const phoneNumber = entries.phone
     const password = entries.password
     const confirmPassword = entries["confirm-password"]
 
-    console.log({ username, email, password, confirmPassword })
-
+    
     if (password !== confirmPassword) {
         showError('Паролите не съвпадат!')
         return;
     }
-
+    
     function showError(message) {
         setTimeout(() => {
             const errorMessage = document.getElementById("error-message");
@@ -31,14 +31,26 @@ export async function registerHandler(e) {
             }
         }, 0);
     }
-
-    const registerUser = async (email, password) => {
+    
+    const registerUser = async (email, password, username, phoneNumber) => {
+        console.log({ username, email, phone: phoneNumber, password, confirmPassword })
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
 
+            await updateProfile(user, {
+                displayName: username
+            });
+
             console.log("Регистрация успешна!", user);
-            localStorage.setItem('firebase.user', JSON.stringify(user));
+            localStorage.setItem('firebase.user', JSON.stringify({
+                email: user.email,
+                displayName: user.displayName,
+                phone: phoneNumber, 
+                uid: user.uid,
+                creationTime: user.metadata.creationTime, // Дата на регистрация
+                lastSignInTime: user.metadata.lastSignInTime // Последно влизане
+            }));
             page.redirect('/');
 
         } catch (error) {
@@ -56,7 +68,7 @@ export async function registerHandler(e) {
                 errorText = "Възникна грешка при регистрация. Моля, опитайте отново.";
             }
 
-            // 🔥 Вземи елемента преди да го използваш!
+           
             const errorMessage = document.getElementById("error-message");
             if (errorMessage) {
                 errorMessage.innerText = errorText;
@@ -66,5 +78,5 @@ export async function registerHandler(e) {
             }
         }
     }
-    registerUser(email, password);
+    registerUser(email, password, username, phoneNumber);
 }
