@@ -724,8 +724,13 @@ body {
 
 /* Текстови полета */
 .register-form input {
-  color: rgb(240, 229, 229); /* Черен текст */
-  border: 3px solid black; /* Черна рамка */
+  width: 100%; 
+  padding: 12px;
+  font-size: 16px; 
+  border: 3px solid black;
+  border-radius: 5px; 
+  background-color: #fff;
+  box-sizing: border-box; 
 }
 
 
@@ -1050,8 +1055,8 @@ body {
 }
 
 .save-profile-btn {
-  display: block;
-  width: 100%;
+  display: inline-block; /* Уверете се, че <a> се държи като блоков елемент */
+  width: 100%; /* Или задайте фиксирана ширина, ако е необходимо */
   padding: 12px;
   font-size: 16px;
   font-weight: bold;
@@ -1060,6 +1065,8 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none; /* Премахва подчертаването */
+  text-align: center; /* Центрира текста */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -1068,7 +1075,7 @@ body {
   transform: scale(1.02);
 }
 
-save-profile-btn:active {
+.save-profile-btn:active {
   background-color: #003f8a;
 }
 
@@ -1076,6 +1083,10 @@ save-profile-btn:active {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.save-profile-btn {
+  text-align: center; /* Центрира текста вътре в бутона */
 }
 
 
@@ -1092,4 +1103,90 @@ save-profile-btn:active {
   .save-profile-btn {
     font-size: 14px;
   }
+}
+
+.change-password-btn {
+  display: inline-block;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Премахва подчертаването */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 50px;
+}
+
+.change-password-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+.change-password-btn:active {
+  background-color: #003f8a;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row; 
+  gap: 10px; 
+  justify-content: center; 
+  margin-top: 20px;
+}
+.delete-account-btn {
+  display: inline-block;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #dc3545; /* Червен цвят за изтриване */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-account-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.02);
+}
+
+.delete-account-btn:active {
+  background-color: #a71d2a;
+}
+
+
+.success-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.success-wrapper h2 {
+  font-size: 24px;
+  color: #28a745; /* Зелен цвят за успех */
+}
+
+.success-wrapper p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.profile-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.profile-link:hover {
+  background-color: #0056b3;
 }

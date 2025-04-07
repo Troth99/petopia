@@ -33,7 +33,6 @@ function profileTemplate(user) {
             <div class="profile-sections">
                 <h3>Други секции</h3>
                 <ul class="profile-menu">
-                    <li><a href="/settings">Настройки</a></li>
                     <li><a href="/my-pets">Преглед на домашните любимци</a></li>
                     <li><a href="/support">Поддръжка</a></li>
                     <li><a href="/return-pet">Връщане на домашен любимец</a></li>

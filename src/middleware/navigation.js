@@ -19,7 +19,7 @@ export default function showNavigation(ctx, next) {
     next()
 }
 
-function loggedInUser() {
+function loggedInUser(user) {
     return html`
 <li class="relative">
 <span id="profile-link" class="profile-link-btn">
@@ -30,7 +30,7 @@ function loggedInUser() {
     <div class="dropdown-item"><a href="/settings">Настройки</a></div>
     <div class="dropdown-item"><a href="/settings">Преглед на домашните любимци</a></div>
     <div class="dropdown-item"><a href="/settings">Поддръжка</a></div>
-    <div class="dropdown-item"><a href="/settings">Сменяне на парола</a></div>
+    <div class="dropdown-item"><a href="/change-password/${user.uid}">Сменяне на парола</a></div>
     <div class="dropdown-item"><a href="/settings">Връщане на домашен любимец</a></div>
     <div class="dropdown-item"><a href="/logout">Изход</a></div>
   </div>
@@ -85,7 +85,7 @@ function navigationTemplate(user) {
 
         <div class="user-actions">
             <ul>
-                ${user ? loggedInUser() : guest()}
+                ${user ? loggedInUser(user) : guest()}
             </ul>
         </div>
     </div>

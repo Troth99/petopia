@@ -1,5 +1,6 @@
 
 import { page, render, html, mainEl } from "../constants/constants.js";
+import { deleteAccountHandler } from "../services/changePwService.js";
 import { submitEditHandler } from "../services/editService.js";
 import { getUserFromLocalStorage } from "../utils/utils.js";
 
@@ -28,16 +29,12 @@ function editTemplate(user) {
                     <label for="phone">Телефонен номер</label>
                     <input type="tel" id="phone" name="phone" value="${user.phone || ''}">
                 </div>
-                <div class="input-group">
-    <label for="currentPassword">Текуща парола</label>
-    <input type="password" id="currentPassword" name="currentPassword" placeholder="Въведете текущата си парола" required>
-</div>
-                <div class="input-group">
-                    <label for="password">Нова парола</label>
-                    <input type="password" id="password" name="password" placeholder="Въведете нова парола">
-                </div>
                 <button type="submit" class="save-profile-btn">Запази промените</button>
             </form>
+            <div class="button-group">
+                <a href="/change-password/${user.uid}" class="change-password-btn">Смяна на парола</a>
+                <button type="button" class="delete-account-btn" @click=${(e) =>deleteAccountHandler(e, user)}>Изтриване на акаунт</button>
+            </div>
         </div>
 `
 
