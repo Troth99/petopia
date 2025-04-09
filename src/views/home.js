@@ -4,6 +4,10 @@ import { setupDropdown } from "../middleware/showHideMenu.js";
 
 export function showHomePage(){
     render(homwPageTemplate(), mainEl)
+    const footer = document.querySelector("footer");
+    if (footer) {
+        footer.style.position = "relative"; // Възстановява нормалната позиция
+    }
 }
 
 function homwPageTemplate(){
@@ -13,7 +17,7 @@ function homwPageTemplate(){
         <div class="hero-text">
             <h2>Намерете своя нов най-добър приятел! 🐾</h2>
             <p>Разгледайте нашите сладки домашни любимци и дайте им нов дом.</p>
-            <a href="#" class="btn">Разгледайте любимците</a>
+            <a href="/petcollection" class="btn">Разгледайте любимците</a>
         </div>
         <div class="hero-image"></div>
     </section>

@@ -79,7 +79,7 @@ export async function registerHandler(e) {
                 errorMessage.innerText = errorText;
                 errorMessage.style.display = "block";
             } else {
-                console.error("❌ Не мога да намеря #error-message в DOM-а!");
+                console.error("Не мога да намеря #error-message в DOM-а!");
             }
         }
     }

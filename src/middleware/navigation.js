@@ -1,12 +1,13 @@
 import { headerEl, render, html } from "../constants/constants.js";
 import { getUserFromLocalStorage } from "../utils/utils.js";
-import { showHideCategories, } from "./showHideCategories.js";
+import { showHideCategories, showHideToys, } from "./showHideCategories.js";
 import { setupDropdown } from "./showHideMenu.js";
 
 
 
 document.addEventListener('DOMContentLoaded', function () {
     showHideCategories();
+    showHideToys()
     setupDropdown();
    
 });
@@ -27,11 +28,12 @@ function loggedInUser(user) {
 </span>
   <div class="dropdown-content-menu">
     <div class="dropdown-item"><a href="/profile">Моят профил</a></div>
-    <div class="dropdown-item"><a href="/settings">Настройки</a></div>
+
     <div class="dropdown-item"><a href="/settings">Преглед на домашните любимци</a></div>
     <div class="dropdown-item"><a href="/settings">Поддръжка</a></div>
     <div class="dropdown-item"><a href="/change-password/${user.uid}">Сменяне на парола</a></div>
     <div class="dropdown-item"><a href="/settings">Връщане на домашен любимец</a></div>
+    <div class="dropdown-item"><a href="/favourites">Любими</a></div>
     <div class="dropdown-item"><a href="/logout">Изход</a></div>
   </div>
 </li>
@@ -72,6 +74,19 @@ function navigationTemplate(user) {
                          <a href="/fishes">Рибки</a>
                         <a href="#">Други</a>
                     </div>
+
+
+                </li>
+                <li class="dropdown-toys">
+                    <a href="#" class="dropbtn-toys">Играчки</a>
+                    <div class="dropdown-content-toys">
+                        <a href="/cat-toys">Играчки за котки</a>
+                        <a href="/dog-toys">Играчки за кучета</a>
+                        <a href="/bird-toys">Играчки за птици</a>
+                        <a href="#">Други</a>
+                    </div>
+
+                    
                 </li>
             </ul>
         </nav>
