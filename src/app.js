@@ -12,6 +12,12 @@ import showPetCollection from "./views/petCollection.js"
 import profileView from "./views/profile.js"
 import showRegister from "./views/register.js"
 import sucessChangePwView from "./views/successChangePw.js"
+import showDogsBreedView from "./views/dogsSmallBreed/smallBreedDogs.js"
+import addBreedView from "./views/addBreed.js"
+import showChihuahuaView from "./views/dogsSmallBreed/chihuahua/showChihuahuaView.js"
+import { showAdoptionForm } from "./views/adopt.js"
+
+
 
 
 page(showNavigation)
@@ -25,4 +31,9 @@ page('/change-password/:id', changePwView)
 page('/success-change-pw', sucessChangePwView)
 page('/petcollection', showPetCollection)
 page('/dogs', showDogsCategoryView)
+page('/dogs/small', showDogsBreedView)
+page('/add-breed', addBreedView)
+
+page('/dogs/chihuahua', showChihuahuaView)
+page('/adopt/:id', showAdoptionForm)
 page.start()

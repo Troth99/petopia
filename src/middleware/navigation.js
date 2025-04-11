@@ -9,18 +9,20 @@ document.addEventListener('DOMContentLoaded', function () {
     showHideCategories();
     showHideToys()
     setupDropdown();
-   
+
 });
 export default function showNavigation(ctx, next) {
     const user = getUserFromLocalStorage()
-  
+
     render(navigationTemplate(user), headerEl)
     setupDropdown();
-   
+
     next()
 }
 
 function loggedInUser(user) {
+    const isAdmin = user.email === "troth@abv.bg";
+
     return html`
 <li class="relative">
 <span id="profile-link" class="profile-link-btn">
@@ -34,6 +36,9 @@ function loggedInUser(user) {
     <div class="dropdown-item"><a href="/change-password/${user.uid}">Сменяне на парола</a></div>
     <div class="dropdown-item"><a href="/settings">Връщане на домашен любимец</a></div>
     <div class="dropdown-item"><a href="/favourites">Любими</a></div>
+    ${isAdmin
+            ? html`<div class="dropdown-item"><a href="/add-breed">Добави порода</a></div>`
+            : ""}
     <div class="dropdown-item"><a href="/logout">Изход</a></div>
   </div>
 </li>
