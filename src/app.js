@@ -16,6 +16,17 @@ import showDogsBreedView from "./views/dogsSmallBreed/smallBreedDogs.js"
 import addBreedView from "./views/addBreed.js"
 import showChihuahuaView from "./views/dogsSmallBreed/chihuahua/showChihuahuaView.js"
 import { showAdoptionForm } from "./views/adopt.js"
+import addAnimalView from "./views/add-animal.js"
+import addDogVeiw from "./views/addBreed.js"
+import showPomeranianView from "./views/dogsSmallBreed/pomeran/showPomeranView.js"
+import showYorkshireTerierView from "./views/dogsSmallBreed/yorkshire/yorshire-terier.js"
+import showMopsView from "./views/dogsSmallBreed/poms/poms.js"
+import showDashshundView from "./views/dogsSmallBreed/dachshund/dachshund.js"
+import showShitZu from "./views/dogsSmallBreed/shih-tzu/shih-tzu.js"
+import showFrenchBuldog from "./views/dogsSmallBreed/french-bulldog/french-bulldog.js"
+import showMalteseView from "./views/dogsSmallBreed/maltese/maltese.js"
+import showPekineseView from "./views/dogsSmallBreed/pekingese/pekingese.js"
+import showKingCharsView from "./views/dogsSmallBreed/cavalier-king-charles/cavalier-king-charles.js"
 
 
 
@@ -32,8 +43,18 @@ page('/success-change-pw', sucessChangePwView)
 page('/petcollection', showPetCollection)
 page('/dogs', showDogsCategoryView)
 page('/dogs/small', showDogsBreedView)
-page('/add-breed', addBreedView)
 
 page('/dogs/chihuahua', showChihuahuaView)
 page('/adopt/:id', showAdoptionForm)
+page('/add-animal', addAnimalView)
+page('/add-dog', addDogVeiw)
+page('/dogs/pomeranian', showPomeranianView)
+page('/dogs/yorkshire-terrier', showYorkshireTerierView)
+page('/dogs/pug', showMopsView)
+page('/dogs/dachshund', showDashshundView)
+page('/dogs/shih-tzu', showShitZu)
+page('/dogs/french-bulldog', showFrenchBuldog)
+page('/dogs/maltese', showMalteseView)
+page('/dogs/pekingese', showPekineseView)
+page('/dogs/cavalier-king-charles', showKingCharsView)
 page.start()

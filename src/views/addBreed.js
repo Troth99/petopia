@@ -4,11 +4,7 @@ import { html, render } from "../constants/constants.js";
 import { addCategoryDogHandler } from "../services/addCategory.js";
 
 
-
-
-
-export default async function addBreedView() {
-    
+export default async function addDogVeiw() {
     render(addBreedTemplate(), document.querySelector("main"));
 
     // Добавяне на слушатели след рендиране на шаблона
@@ -69,6 +65,7 @@ function addBreedTemplate() {
       <section class="add-breed">
             <h2>Добавяне на нова порода</h2>
             <form id="add-breed-form" @submit=${addCategoryDogHandler}>
+                
 
                 <label for="breed-image">Снимка на породата (URL):</label>
                 <input type="text" id="breed-image" name="breedImage" required>

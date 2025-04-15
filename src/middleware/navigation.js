@@ -37,7 +37,7 @@ function loggedInUser(user) {
     <div class="dropdown-item"><a href="/settings">Връщане на домашен любимец</a></div>
     <div class="dropdown-item"><a href="/favourites">Любими</a></div>
     ${isAdmin
-            ? html`<div class="dropdown-item"><a href="/add-breed">Добави порода</a></div>`
+            ? html`<div class="dropdown-item"><a href="/add-animal">Добавяне на животно</a></div>`
             : ""}
     <div class="dropdown-item"><a href="/logout">Изход</a></div>
   </div>

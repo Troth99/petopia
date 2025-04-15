@@ -1,15 +1,15 @@
 import { mainEl, render, html } from "../../../constants/constants.js";
-import { getAllYokrshireTerier, getChihuahuaInfo } from "../../../services/breeds.js";
+import { getAllPekinese, getAllYokrshireTerier } from "../../../services/breeds.js";
 import { auth } from "../../../config/firebaseInit.js"; 
 import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../../../config/firebaseInit.js";
 
-export default async function showChihuahuaView() {
-    const chihuahua = await getChihuahuaInfo();
-    render(chihuahuaTemplate(chihuahua), mainEl);
+export default async function showPekineseView() {
+    const pekines = await getAllPekinese();
+    render(pekineseTemplate(pekines), mainEl);
 }
 
-function chihuahuaTemplate(yorkshireTerier) {
+function pekineseTemplate(pekines) {
 
     function translateCoatType(coatType) {
         const coatTypeTranslations = {
@@ -57,11 +57,11 @@ function chihuahuaTemplate(yorkshireTerier) {
 
     return html`
         <section class="chihuahua-info">
-            <h2>Чихуахуа</h2>
+            <h2>Пекинез</h2>
 
-            ${yorkshireTerier.length === 0
-                ? html`<p class="no-data">Няма налични Йоркширски териери за осиновяване в момента. </p>`
-                : yorkshireTerier.map(
+            ${pekines.length === 0
+                ? html`<p class="no-data">Няма налични Пекинези за осиновяване в момента. </p>`
+                : pekines.map(
                       (breed) => html`
                           <div class="breed-card">
                               <img src="${breed.image}" class="breed-image" />
@@ -91,4 +91,3 @@ function chihuahuaTemplate(yorkshireTerier) {
         </section>
     `;
 }
-

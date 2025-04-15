@@ -1,15 +1,15 @@
 import { mainEl, render, html } from "../../../constants/constants.js";
-import { getAllYokrshireTerier, getChihuahuaInfo } from "../../../services/breeds.js";
+import { getAllShitZu, getAllYokrshireTerier } from "../../../services/breeds.js";
 import { auth } from "../../../config/firebaseInit.js"; 
 import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../../../config/firebaseInit.js";
 
-export default async function showChihuahuaView() {
-    const chihuahua = await getChihuahuaInfo();
-    render(chihuahuaTemplate(chihuahua), mainEl);
+export default async function showShitZu() {
+    const shitZu = await getAllShitZu();
+    render(shitzuTemplate(shitZu), mainEl);
 }
 
-function chihuahuaTemplate(yorkshireTerier) {
+function shitzuTemplate(yorkshireTerier) {
 
     function translateCoatType(coatType) {
         const coatTypeTranslations = {
@@ -57,10 +57,10 @@ function chihuahuaTemplate(yorkshireTerier) {
 
     return html`
         <section class="chihuahua-info">
-            <h2>Чихуахуа</h2>
+            <h2>Ши Тцу</h2>
 
             ${yorkshireTerier.length === 0
-                ? html`<p class="no-data">Няма налични Йоркширски териери за осиновяване в момента. </p>`
+                ? html`<p class="no-data">Няма налични Ши Тцу за осиновяване в момента. </p>`
                 : yorkshireTerier.map(
                       (breed) => html`
                           <div class="breed-card">
@@ -91,4 +91,3 @@ function chihuahuaTemplate(yorkshireTerier) {
         </section>
     `;
 }
-

@@ -1515,71 +1515,197 @@ body {
   min-height: 100px;
 }
 
-.chihuahua-info {
+
+
+.animal-categories {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
+  text-align: center;
+}
+
+.animal-categories h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.category-card span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.chihuahua-info {
+  padding: 2rem;
+  background-color: #f9f9f9;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.breed-card {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.chihuahua-info h2 {
   text-align: center;
-  margin-bottom: 20px;
-  background-color: #fff;
-  padding-bottom: 60px;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.breed-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 1rem auto;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  max-width: 740px; 
+  width: 100%;
+}
+.breed-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .breed-image {
   width: 100%;
-  max-width: 250px;
   height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease; /* Анимация при hover */
+  display: block;
+  object-fit: cover;
 }
-
 
 .breed-details {
-  padding: 10px;
+  padding: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
 }
 
-.breed-name {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 18px;
-  font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.breed-details p {
+  margin: 0.5rem 0;
+}
+
+.adoption-link {
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .adopt-button {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #007bff;
+  background-color: #ff6b6b;
   color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
   text-decoration: none;
-  cursor: pointer;
-  opacity: 1; /* Уверете се, че бутонът е видим */
-  z-index: 10;
-  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
+
 .adopt-button:hover {
-  background-color: #0056b3;
-  transform: translateX(-50%) scale(1.05);
+  background-color: #ff4c4c;
 }
+
+.no-data {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+  padding: 2rem 1rem;
+}
+
+
+.login-prompt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f1f1f1, #e3e3e3);
+  padding: 20px;
+}
+
+
+.login-prompt-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.login-prompt-container:hover {
+  transform: translateY(-5px);
+}
+
+
+.login-prompt h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+}
+
+
+.login-prompt p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.link-button {
+  color: #3498db;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 2px solid #3498db;
+  border-radius: 30px;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.link-button:hover {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+
+.link-button:active {
+  transform: scale(0.98);
+}
+

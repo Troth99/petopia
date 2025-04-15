@@ -1,67 +1,67 @@
 import { mainEl, render, html } from "../../../constants/constants.js";
-import { getAllYokrshireTerier, getChihuahuaInfo } from "../../../services/breeds.js";
+import { getAllPomeranian } from "../../../services/breeds.js";
 import { auth } from "../../../config/firebaseInit.js"; 
 import { doc, deleteDoc } from "firebase/firestore";
-import { db } from "../../../config/firebaseInit.js";
+import { db } from "../../../config/firebaseInit.js"; 
 
-export default async function showChihuahuaView() {
-    const chihuahua = await getChihuahuaInfo();
-    render(chihuahuaTemplate(chihuahua), mainEl);
+export default async function showPomeranianView() {
+    const pomeranian = await getAllPomeranian();
+    render(pomeranianTemplate(pomeranian), mainEl);
 }
 
-function chihuahuaTemplate(yorkshireTerier) {
 
-    function translateCoatType(coatType) {
-        const coatTypeTranslations = {
-            short: "Късокосместа",
-            long: "Дългокосместа",
-            medium: "Средна дължина",
-        };
-        return coatTypeTranslations[coatType] || coatType;
-    }
-
-
-    function translateSize(size) {
-        const sizeTranslations = {
-            small: "Малък",
-            medium: "Среден",
-            large: "Голям",
-        };
-        return sizeTranslations[size] || size;
-    }
+function translateCoatType(coatType) {
+    const coatTypeTranslations = {
+        short: "Късокосместа",
+        long: "Дългокосместа",
+        medium: "Средна дължина",
+    };
+    return coatTypeTranslations[coatType] || coatType;
+}
 
 
-    function translateEnergyLevel(energyLevel) {
-        const energyLevelTranslations = {
-            low: "Ниско",
-            medium: "Средно",
-            high: "Високо",
-        };
-        return energyLevelTranslations[energyLevel] || energyLevel;
-    }
+function translateSize(size) {
+    const sizeTranslations = {
+        small: "Малък",
+        medium: "Среден",
+        large: "Голям",
+    };
+    return sizeTranslations[size] || size;
+}
 
 
-    async function deleteBreed(breedId) {
-        if (confirm("Сигурни ли сте, че искате да изтриете този запис?")) {
-            try {
-               
-                await deleteDoc(doc(db, "breeds", breedId));
-                alert("Записът беше успешно изтрит!");
-                location.reload(); 
-            } catch (error) {
-                console.error("Грешка при изтриването на запис:", error);
-                alert("Не успяхме да изтрием записа.");
-            }
+function translateEnergyLevel(energyLevel) {
+    const energyLevelTranslations = {
+        low: "Ниско",
+        medium: "Средно",
+        high: "Високо",
+    };
+    return energyLevelTranslations[energyLevel] || energyLevel;
+}
+
+
+async function deleteBreed(breedId) {
+    if (confirm("Сигурни ли сте, че искате да изтриете този запис?")) {
+        try {
+      
+            await deleteDoc(doc(db, "breeds", breedId));
+            alert("Записът беше успешно изтрит!");
+            location.reload(); 
+        } catch (error) {
+            console.error("Грешка при изтриването на запис:", error);
+            alert("Не успяхме да изтрием записа.");
         }
     }
+}
 
+function pomeranianTemplate(pomeranian) {
     return html`
         <section class="chihuahua-info">
-            <h2>Чихуахуа</h2>
+            <h2>Померан</h2>
 
-            ${yorkshireTerier.length === 0
-                ? html`<p class="no-data">Няма налични Йоркширски териери за осиновяване в момента. </p>`
-                : yorkshireTerier.map(
+            ${pomeranian.length === 0
+                ? html`<p class="no-data">Няма налични Померани за осиновяване в момента. </p>`
+                : pomeranian.map(
                       (breed) => html`
                           <div class="breed-card">
                               <img src="${breed.image}" class="breed-image" />
@@ -91,4 +91,3 @@ function chihuahuaTemplate(yorkshireTerier) {
         </section>
     `;
 }
-
