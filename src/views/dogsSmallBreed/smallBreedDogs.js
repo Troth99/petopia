@@ -49,12 +49,7 @@ function smallDogsBreedTemplate() {
             <h3>Ши Тцу</h3>
           </a>
         </div>
-        <div class="dog-card">
-          <a href="/dogs/french-bulldog">
-            <span class="dog-image french-bulldog"></span>
-            <h3>Френски булдог</h3>
-          </a>
-        </div>
+
         <div class="dog-card">
           <a href="/dogs/maltese">
             <span class="dog-image maltese"></span>

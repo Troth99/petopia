@@ -31,8 +31,16 @@ export default async function addDogVeiw() {
         ],
         medium: [
             { value: "beagle", text: "Бийгъл" },
-            { value: "border-collie", text: "Бордър Коли" },
-            { value: "bulldog", text: "Булдог" },
+            { value: "english-cocker-spaniel", text: "Английски кокер шпаньол" },
+            { value: "australian-shepherd", text: "Австралийска овчарка" },
+            { value: "bull-terrier", text: "Бультериѐр" },
+            { value: "shetland-sheepdog", text: "Шетландска овчарка" },
+            { value: "chow-chow", text: "Чао Чао" },
+            { value: "finnish-spitz", text: "Финландско шпице" },
+            { value: "pharaoh-hound", text: "Фараоново куче" },
+            { value: "brittany-spaniel", text: "Британи шпаньол" },
+            { value: "norwegian-elkhound", text: "Норвежки елкхунд" },
+
         ],
         large: [
             { value: "german-shepherd", text: "Немска овчарка" },

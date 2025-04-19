@@ -1442,6 +1442,41 @@ body {
   background-image: url("../images/cavalier-king-charles.jpg");
 }
 
+.beagle {
+  background-image: url("../images/beagule.jpg");
+}
+
+.australian-shepherd {
+  background-image: url("../images/austrian.webp");
+}
+.English-Cocker-Spaniel{
+  background-image: url("../images/cocker.avif");
+}
+
+.Bull-Terrier{
+  background-image: url("../images/bullTerirer.webp");
+}
+
+.Shetland-sheepdog {
+  background-image: url("../images/Shetland-sheepdog.avif");
+}
+
+.Chow-Chow {
+  background-image: url("../images/chowchow.jpg");
+}
+
+.finnish-spitz {
+  background-image: url("../images/finnish-spitz.jpg");
+}
+.Pharaoh-Hound {
+  background-image: url("../images/Pharaoh-Hound.jpg");
+}
+.Brittany-Spaniel {
+  background-image: url("../images/Brittany-Spaniel.webp");
+}
+.Norwegian-Elkhound {
+  background-image: url("../images/Norwegian-Elkhound.jpg");
+}
 /* Заглавие на всяка порода */
 .dog-card h3 {
   font-size: 18px;

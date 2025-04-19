@@ -24,8 +24,6 @@ function dogsCategoriesTemplate() {
         <li><a href="/dogs/large">Големи породи</a></li>
         <li> <a href="/dogs/short-hair">Късокосмести</a></li>
         <li> <a href="/dogs/long-hair">Дългокосмести</a></li>
-        <li> <a href="/dogs/hypoallergenic">Хипоалергенни</a></li>
-        <li> <a href="/dogs/puppies">Кученца</a></li>
         <li> <a href="/dogs/popular">Най-популярни породи</a></li>
       </ul>
      </section>

@@ -170,3 +170,22 @@ export async function getAllKingDogs() {
         throw error;
     }
 }
+
+export async function getAllEnglishCockerSpaniel() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('category', '==', 'english-cocker-spaniel'))
+        const querySnapshot = await getDocs(q)
+
+        const breeds = []
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() })
+        })
+        return breeds
+    } catch (error) {
+        console.error("Грешка при извличане на данни за Чихуахуа:", error.message);
+        throw error;
+    }
+}
+
+

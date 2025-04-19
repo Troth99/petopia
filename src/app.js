@@ -27,6 +27,8 @@ import showFrenchBuldog from "./views/dogsSmallBreed/french-bulldog/french-bulld
 import showMalteseView from "./views/dogsSmallBreed/maltese/maltese.js"
 import showPekineseView from "./views/dogsSmallBreed/pekingese/pekingese.js"
 import showKingCharsView from "./views/dogsSmallBreed/cavalier-king-charles/cavalier-king-charles.js"
+import meidumBreedView from "./views/dogsMediumBreed/mediumsBreedsDogs.js"
+import showEnglishCckerSpanielView from "./views/dogsMediumBreed/english-cocker-spaniel/english-cocker-spaniel.js"
 
 
 
@@ -57,4 +59,8 @@ page('/dogs/french-bulldog', showFrenchBuldog)
 page('/dogs/maltese', showMalteseView)
 page('/dogs/pekingese', showPekineseView)
 page('/dogs/cavalier-king-charles', showKingCharsView)
+
+//medium dogs breed
+page('/dogs/medium', meidumBreedView)
+page('/dogs/English-Cocker-Spaniel', showEnglishCckerSpanielView)
 page.start()
