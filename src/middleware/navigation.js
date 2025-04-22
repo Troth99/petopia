@@ -31,11 +31,10 @@ function loggedInUser(user) {
   <div class="dropdown-content-menu">
     <div class="dropdown-item"><a href="/profile">Моят профил</a></div>
 
-    <div class="dropdown-item"><a href="/settings">Преглед на домашните любимци</a></div>
+    <div class="dropdown-item"><a href="/settings">Преглед на процес за осиновяване</a></div>
     <div class="dropdown-item"><a href="/settings">Поддръжка</a></div>
     <div class="dropdown-item"><a href="/change-password/${user.uid}">Сменяне на парола</a></div>
     <div class="dropdown-item"><a href="/settings">Връщане на домашен любимец</a></div>
-    <div class="dropdown-item"><a href="/favourites">Любими</a></div>
     ${isAdmin
             ? html`<div class="dropdown-item"><a href="/add-animal">Добавяне на животно</a></div>`
             : ""}

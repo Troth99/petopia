@@ -1,10 +1,19 @@
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* заема цялата височина */
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
 }
-
+main {
+  flex: 1; /* Това бута футъра надолу */
+}
 /* Основен стил за хедъра */
 /* Основен контейнер за хедъра */
 .header-container {
@@ -236,15 +245,11 @@ body {
 }
 
 footer {
-  position: center;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   background-color: #333;
   color: white;
   padding: 15px 0;
   text-align: center;
-  z-index: 1000;
+  width: 100%;
 }
 
 /* Стилове за контейнера на формата */
@@ -1744,3 +1749,114 @@ body {
   transform: scale(0.98);
 }
 
+.short-hair-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; 
+  padding: 2rem 2rem;
+  margin-bottom: 5rem; 
+}
+
+.short-hair-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.05rem;
+  padding: 1rem;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  margin-bottom: 1.5rem;
+}
+
+.short-hair-image {
+  width: 100%;
+  height: 500px; 
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.short-hair-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: #333;
+  flex-grow: 1; 
+}
+
+
+.short-hair-details p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.short-hair-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 1rem; /* Отстояние между текста и бутоните */
+}
+
+.short-hair-adopt,
+.short-hair-delete {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.short-hair-adopt {
+  background-color: #4caf50;
+}
+
+.short-hair-delete {
+  background-color: #f44336;
+}
+
+.short-hair-card:last-child {
+  margin-bottom: 3rem; 
+}
+
+.short-hair-adopt:hover {
+  background-color: #45a049; 
+  transform: scale(1.05); 
+}
+
+.short-hair-delete:hover {
+  background-color: #d32f2f; 
+  transform: scale(1.05); 
+}
+
+.short-hair-title {
+  text-align: center;
+  font-size: 2rem; 
+  font-family: 'Arial', sans-serif; 
+  font-weight: 600; 
+  color: #333; 
+  background: linear-gradient(90deg, #ff6f61, #ff7f50); 
+  -webkit-background-clip: text; 
+  color: transparent; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  padding: 0.5rem 0; 
+  margin-bottom: 1.5rem; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease;
+}
+
+.short-hair-title:hover {
+  transform: scale(1.05); 
+  color: #ff6f61; 
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); 
+}

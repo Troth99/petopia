@@ -68,7 +68,7 @@ function mediumBreedTemplate() {
           </a>
         </div>
         <div class="dog-card">
-          <a href="/dogs/нorwegian-еlkhound">
+          <a href="/dogs/norwegian-elkhound">
             <span class="dog-image Norwegian-Elkhound"></span>
             <h3>Норвежки елкхунд</h3>
           </a>

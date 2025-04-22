@@ -29,6 +29,18 @@ import showPekineseView from "./views/dogsSmallBreed/pekingese/pekingese.js"
 import showKingCharsView from "./views/dogsSmallBreed/cavalier-king-charles/cavalier-king-charles.js"
 import meidumBreedView from "./views/dogsMediumBreed/mediumsBreedsDogs.js"
 import showEnglishCckerSpanielView from "./views/dogsMediumBreed/english-cocker-spaniel/english-cocker-spaniel.js"
+import showBeagleView from "./views/dogsMediumBreed/beagle/beagle.js"
+import showAustralianShepherdView from "./views/dogsMediumBreed/australianShepherd/australianShepherd.js"
+import showBullTerirerView from "./views/dogsMediumBreed/bullTerier/bullterier.js"
+import showShetlandSheperd from "./views/dogsMediumBreed/shetlandSheperd/shetlandSheperd.js"
+import showChowChowView from "./views/dogsMediumBreed/chowChow/chowChow.js"
+import showFinishSpitzView from "./views/dogsMediumBreed/finishSpitz/finishSpitz.js"
+import showPharaonView from "./views/dogsMediumBreed/pharaonHound/pharaohHound.js"
+import showBrittanySpanel from "./views/dogsMediumBreed/brittanySpaniel/brittanySpaniel.js"
+import showNorvegianElkhoundView from "./views/dogsMediumBreed/norwegianElkhound/norvegianElkhound.js"
+import showShortHairCoatView from "./views/hairDogs/shortHairDogs.js"
+import longHaiDogsView from "./views/hairDogs/longHairDogs.js"
+import showMediumHairDogsView from "./views/hairDogs/mediumHaiDogs.js"
 
 
 
@@ -63,4 +75,18 @@ page('/dogs/cavalier-king-charles', showKingCharsView)
 //medium dogs breed
 page('/dogs/medium', meidumBreedView)
 page('/dogs/English-Cocker-Spaniel', showEnglishCckerSpanielView)
+page('/dogs/Beagle', showBeagleView)
+page('/dogs/Australian-shepherd', showAustralianShepherdView)
+page('/dogs/Bull-terrier', showBullTerirerView)
+page('/dogs/Shetland-sheepdog', showShetlandSheperd)
+page('/dogs/chow-chow', showChowChowView)
+page('/dogs/finnish-spitz', showFinishSpitzView)
+page('/dogs/pharaoh-hound', showPharaonView)
+page('/dogs/brittany-spaniel', showBrittanySpanel)
+page('/dogs/norwegian-elkhound', showNorvegianElkhoundView)
+
+//short coat Dogs
+page('/dogs/short-hair', showShortHairCoatView)
+page('/dogs/long-hair', longHaiDogsView)
+page('/dogs/medium-hair', showMediumHairDogsView)
 page.start()

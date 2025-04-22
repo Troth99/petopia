@@ -188,4 +188,218 @@ export async function getAllEnglishCockerSpaniel() {
     }
 }
 
+export async function getAllBeagles() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('category', '==', 'beagle'))
+        const querySnapshot = await getDocs(q)
+
+        const breeds = []
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() })
+        })
+        return breeds
+    } catch (error) {
+        console.error("Грешка при извличане на данни за Чихуахуа:", error.message);
+        throw error;
+    }
+}
+
+export async function getAllAustiranShepherd() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('category', '==', 'australian-shepherd'))
+        const querySnapshot = await getDocs(q)
+
+        const breeds = []
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() })
+        })
+        return breeds
+    } catch (error) {
+        console.error("Грешка при извличане на данни за Чихуахуа:", error.message);
+        throw error;
+    }
+}
+
+export async function getAllBullTeriers() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('category', '==', 'bull-terrier'))
+        const querySnapshot = await getDocs(q)
+
+        const breeds = []
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() })
+        })
+        return breeds
+    } catch (error) {
+        console.error("Грешка при извличане на данни за Чихуахуа:", error.message);
+        throw error;
+    }
+}
+
+export async function getAllShetlandSheepdog() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('category', '==', 'shetland-sheepdog'))
+        const querySnapshot = await getDocs(q)
+
+        const breeds = []
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() })
+        })
+        return breeds
+    } catch (error) {
+        console.error("Грешка при извличане на данни за Чихуахуа:", error.message);
+        throw error;
+    }
+}
+
+export async function getAllChowChow() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('category', '==', 'chow-chow'))
+        const querySnapshot = await getDocs(q)
+
+        const breeds = []
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() })
+        })
+        return breeds
+    } catch (error) {
+        console.error("Грешка при извличане на данни за Чихуахуа:", error.message);
+        throw error;
+    }
+}
+
+export async function getAllFinishSpitz() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('category', '==', 'finnish-spitz'))
+        const querySnapshot = await getDocs(q)
+
+        const breeds = []
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() })
+        })
+        return breeds
+    } catch (error) {
+        console.error("Грешка при извличане на данни за Чихуахуа:", error.message);
+        throw error;
+    }
+}
+
+export async function getAllPHaraonDog() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('category', '==', 'pharaoh-hound'))
+        const querySnapshot = await getDocs(q)
+
+        const breeds = []
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() })
+        })
+        return breeds
+    } catch (error) {
+        console.error("Грешка при извличане на данни за Чихуахуа:", error.message);
+        throw error;
+    }
+}
+
+
+export async function getAllBirthdaySpanel() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('category', '==', 'brittany-spaniel'))
+        const querySnapshot = await getDocs(q)
+
+        const breeds = []
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() })
+        })
+        return breeds
+    } catch (error) {
+        console.error("Грешка при извличане на данни за Чихуахуа:", error.message);
+        throw error;
+    }
+}
+
+
+export async function getAllNorwegianElkhoud() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('category', '==', 'norwegian-elkhound'))
+        const querySnapshot = await getDocs(q)
+
+        const breeds = []
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() })
+        })
+        return breeds
+    } catch (error) {
+        console.error("Грешка при извличане на данни за Чихуахуа:", error.message);
+        throw error;
+    }
+}
+
+//къса козина кучета
+export async function getAllShortCoatBreeds() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('coatType', '==', 'short'));
+        const querySnapshot = await getDocs(q);
+
+        const breeds = [];
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() });
+        });
+        return breeds;
+    } catch (error) {
+        console.error("Грешка при извличане на данни за кучетата с къса козина:", error.message);
+        throw error;
+    }
+}
+
+//дълга козина кучета
+export async function getAllLongHairCoatDogs() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('coatType', '==', 'long'));
+        const querySnapshot = await getDocs(q);
+
+        const breeds = [];
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() });
+        });
+        return breeds;
+    } catch (error) {
+        console.error("Грешка при извличане на данни за кучетата с къса козина:", error.message);
+        throw error;
+    }
+}
+
+//средна козина кучета
+export async function getAllMediumHairDogs() {
+    try {
+        const breedsRef = collection(db, "breeds");
+        const q = query(breedsRef, where('coatType', '==', 'medium'));
+        const querySnapshot = await getDocs(q);
+
+        const breeds = [];
+        querySnapshot.forEach((doc) => {
+            breeds.push({ id: doc.id, ...doc.data() });
+        });
+        return breeds;
+    } catch (error) {
+        console.error("Грешка при извличане на данни за кучетата с къса козина:", error.message);
+        throw error;
+    }
+}
+
+
+
+
+
+
 
