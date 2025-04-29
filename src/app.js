@@ -41,6 +41,19 @@ import showNorvegianElkhoundView from "./views/dogsMediumBreed/norwegianElkhound
 import showShortHairCoatView from "./views/hairDogs/shortHairDogs.js"
 import longHaiDogsView from "./views/hairDogs/longHairDogs.js"
 import showMediumHairDogsView from "./views/hairDogs/mediumHaiDogs.js"
+import largeBreedView from "./views/dogsLargeBreed/dogsLargeBreedView.js"
+import showAllGermanShepherd from "./views/dogsLargeBreed/germanShephard/germanShephard.js"
+import showALlGoldenRetriever from "./views/dogsLargeBreed/goldenRotreiver/golden.js"
+import showAllLabradors from "./views/dogsLargeBreed/labrador/labrador.js"
+import mastiffView from "./views/dogsLargeBreed/mastiff/mastiff.js"
+import saintBernardView from "./views/dogsLargeBreed/saintBernar/saintBernar.js"
+import newfoundlandView from "./views/dogsLargeBreed/newfoundland/newfoundland.js"
+import kavkazShepherdView from "./views/dogsLargeBreed/kavkazShepherd/kavkazShepherd.js"
+import showKangalView from "./views/dogsLargeBreed/kangal/kangal.js"
+import showCatsCategories from "./views/cats/catsCategories.js"
+import addCatView from "./views/addCatBreed.js"
+import showALlHomeCats from "./views/cats/homeCats.js"
+
 
 
 
@@ -89,4 +102,20 @@ page('/dogs/norwegian-elkhound', showNorvegianElkhoundView)
 page('/dogs/short-hair', showShortHairCoatView)
 page('/dogs/long-hair', longHaiDogsView)
 page('/dogs/medium-hair', showMediumHairDogsView)
+
+//large dogs breed
+page('/dogs/large', largeBreedView)
+page('/dogs/german-shepherd', showAllGermanShepherd)
+page('/dogs/golden-retriever', showALlGoldenRetriever)
+page('/dogs/labrador', showAllLabradors)
+page('/dogs/english-mastiff', mastiffView)
+page('/dogs/saint-bernard', saintBernardView)
+page('/dogs/newfoundland', newfoundlandView)
+page('/dogs/kavkaz-shepherd', kavkazShepherdView)
+page('/dogs/kangal', showKangalView)
+
+//cats
+page('/cats', showCatsCategories)
+page('/add-cat', addCatView)
+page('/cats/indoor', showALlHomeCats)
 page.start()

@@ -46,6 +46,11 @@ export default async function addDogVeiw() {
             { value: "german-shepherd", text: "Немска овчарка" },
             { value: "golden-retriever", text: "Голдън Ретривър" },
             { value: "labrador", text: "Лабрадор" },
+            { value: "english-mastiff", text: "Мастиф" },
+            { value: "saint-bernard", text: "Санбернар" },
+            { value: "newfoundland", text: "Нюфаундленд" },
+            { value: "kavkaz-shepherd", text: "Кавказка овчарка" },
+            { value: "kangal", text: "Кангал" },
         ],
     };
 

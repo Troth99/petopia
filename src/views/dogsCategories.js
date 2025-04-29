@@ -25,7 +25,6 @@ function dogsCategoriesTemplate() {
         <li> <a href="/dogs/short-hair">Късокосмести</a></li>
         <li> <a href="/dogs/medium-hair">Средна козина</a></li>
         <li> <a href="/dogs/long-hair">Дългокосмести</a></li>
-        <li> <a href="/dogs/popular">Най-популярни породи</a></li>
       </ul>
      </section>
     `;
