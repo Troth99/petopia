@@ -7,7 +7,7 @@ import { addCategoryCatHandler } from "../services/addCatCategory.js";
 export default async function addCatView() {
     render(addCatBreedTemplate(), document.querySelector("main"));
 
-    // Добавяне на слушатели след рендиране на шаблона
+
   
 }
 function addCatBreedTemplate() {
@@ -23,7 +23,7 @@ function addCatBreedTemplate() {
                 <label for="breed-description">Описание:</label>
                 <textarea id="breed-description" name="catDescription" placeholder="Добавете описание на породата..." required></textarea>
 
-                <label for="breed-size">За какво е походящ:</label>
+                <label for="breed-size">Тип:</label>
                 <select id="breed-size" name="catSize" required>
                     <option value="indoor">За дома</option>
                     <option value="long-hair">С дълга козина</option>

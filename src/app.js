@@ -53,6 +53,11 @@ import showKangalView from "./views/dogsLargeBreed/kangal/kangal.js"
 import showCatsCategories from "./views/cats/catsCategories.js"
 import addCatView from "./views/addCatBreed.js"
 import showALlHomeCats from "./views/cats/homeCats.js"
+import showAllLongHairCats from "./views/cats/longHairCats.js"
+import showAllHypoalegenicCats from "./views/cats/hypoalergenic.js"
+import showAllFriendlyCats from "./views/cats/friendly.js"
+import showAllInteligentCats from "./views/cats/intelligentCats.js"
+import showAllExoticCats from "./views/cats/exoticCats.js"
 
 
 
@@ -118,4 +123,9 @@ page('/dogs/kangal', showKangalView)
 page('/cats', showCatsCategories)
 page('/add-cat', addCatView)
 page('/cats/indoor', showALlHomeCats)
+page('/cats/long-hair', showAllLongHairCats)
+page('/cats/hypoallergenic', showAllHypoalegenicCats)
+page('/cats/friendly', showAllFriendlyCats)
+page('/cats/intelligent', showAllInteligentCats)
+page('/cats/exotic', showAllExoticCats)
 page.start()

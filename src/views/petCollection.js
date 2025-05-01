@@ -47,7 +47,7 @@ function petColelctionTemplate(){
                     </a>
                 </div>
                 <div class="category">
-                    <a href="/cats">
+                    <a href="/rabbits">
                         <span class="category-icon rabbit-icon"></span>
                         <h3>Зайчета</h3>
                     </a>
