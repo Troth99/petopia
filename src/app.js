@@ -58,6 +58,11 @@ import showAllHypoalegenicCats from "./views/cats/hypoalergenic.js"
 import showAllFriendlyCats from "./views/cats/friendly.js"
 import showAllInteligentCats from "./views/cats/intelligentCats.js"
 import showAllExoticCats from "./views/cats/exoticCats.js"
+import addRabbitView from "./views/addRabbit.js"
+import showRabbitCategories from "./views/rabbits/rabbitsMainView.js"
+import showAllIndoorRabbits from "./views/rabbits/indoorRabbits.js"
+import showALlMiniRabbits from "./views/rabbits/rabbitsMini.js"
+import showALlGiganticRabbits from "./views/rabbits/giganticRabbits.js"
 
 
 
@@ -128,4 +133,11 @@ page('/cats/hypoallergenic', showAllHypoalegenicCats)
 page('/cats/friendly', showAllFriendlyCats)
 page('/cats/intelligent', showAllInteligentCats)
 page('/cats/exotic', showAllExoticCats)
+
+//rabbits
+page('/add-rabbit', addRabbitView)
+page('/rabbits', showRabbitCategories)
+page('/rabbit/indoor', showAllIndoorRabbits)
+page('/rabbit/mini', showALlMiniRabbits)
+page('/rabbit/gigantic', showALlGiganticRabbits)
 page.start()

@@ -1996,3 +1996,93 @@ body {
   font-size: 0.95rem;
   color: #333;
 }
+
+
+/* Зайчета CSS */
+
+.rabbits-categories {
+  position: relative;
+  width: 100vw;           
+  min-height: 100vh;        
+  background-image: url('../images/leftRabbit.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10rem; 
+  padding-top: 20px;
+}
+
+.rabbit-category:hover {
+  transform: scale(1.05); 
+  background-color: rgba(250, 250, 250, 0.9); 
+  border-color: #d4c3ae;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  color: #4a3927; 
+}
+
+.rabbits-categories::before,
+.rabbits-categories::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%; 
+  height: 100%; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.rabbits-categories::before {
+  left: 0; 
+  background-image: url('../images/leftRabbit.jpg'); 
+}
+
+.rabbits-categories::after {
+  right: 0; 
+  background-image: url('../images/leftRabbit.jpg'); 
+  transform: scaleX(-1); 
+}
+
+.rabbit-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 1.5rem;
+  justify-items: center; 
+  align-items: start;  
+  padding: 0 2rem;
+  z-index: 1; 
+}
+
+.rabbit-category {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(233, 224, 209, 0.7);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #4a3927;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  max-width: 300px; 
+}
+
+.rabbit-category h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #5e4029;
+}
+
+.rabbit-category p {
+  margin: 0;
+  font-size: 1rem;
+  color: #6c5a45;
+}
