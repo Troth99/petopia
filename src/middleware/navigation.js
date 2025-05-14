@@ -66,13 +66,11 @@ function navigationTemplate(user) {
         <nav class="nav-menu">
             <ul>
                 <li><a href="/" id="home-link">Начало</a></li>
-                <li><a href="#" id="ads-link">Обяви</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Категории</a>
                     <div class="dropdown-content">
                         <a href="/cats">Котки</a>
                         <a href="/dogs">Кучета</a>
-                        <a href="/birds">Птици</a>
                          <a href="/rabbits">Зайчета</a>
                          <a href="/roddent">Гризачи</a>
                          <a href="/fishes">Рибки</a>
