@@ -81,10 +81,11 @@ page('/petcollection', showPetCollection)
 page('/dogs', showDogsCategoryView)
 page('/dogs/small', showDogsBreedView)
 
-page('/dogs/chihuahua', showChihuahuaView)
 page('/adopt/:id', showAdoptionForm)
 page('/add-animal', addAnimalView)
 page('/add-dog', addDogVeiw)
+
+page('/dogs/chihuahua', showChihuahuaView)
 page('/dogs/pomeranian', showPomeranianView)
 page('/dogs/yorkshire-terrier', showYorkshireTerierView)
 page('/dogs/pug', showMopsView)
@@ -108,12 +109,6 @@ page('/dogs/pharaoh-hound', showPharaonView)
 page('/dogs/brittany-spaniel', showBrittanySpanel)
 page('/dogs/norwegian-elkhound', showNorvegianElkhoundView)
 
-//short coat Dogs
-page('/dogs/short-hair', showShortHairCoatView)
-page('/dogs/long-hair', longHaiDogsView)
-page('/dogs/medium-hair', showMediumHairDogsView)
-
-//large dogs breed
 page('/dogs/large', largeBreedView)
 page('/dogs/german-shepherd', showAllGermanShepherd)
 page('/dogs/golden-retriever', showALlGoldenRetriever)
@@ -123,6 +118,12 @@ page('/dogs/saint-bernard', saintBernardView)
 page('/dogs/newfoundland', newfoundlandView)
 page('/dogs/kavkaz-shepherd', kavkazShepherdView)
 page('/dogs/kangal', showKangalView)
+//short coat Dogs
+page('/dogs/short-hair', showShortHairCoatView)
+page('/dogs/long-hair', longHaiDogsView)
+page('/dogs/medium-hair', showMediumHairDogsView)
+
+//large dogs breed
 
 //cats
 page('/cats', showCatsCategories)

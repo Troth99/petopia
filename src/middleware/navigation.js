@@ -31,12 +31,15 @@ function loggedInUser(user) {
   <div class="dropdown-content-menu">
     <div class="dropdown-item"><a href="/profile">Моят профил</a></div>
 
-    <div class="dropdown-item"><a href="/settings">Преглед на процес за осиновяване</a></div>
+    <div class="dropdown-item"><a href="/addoptation">Преглед на процес за осиновяване</a></div>
     <div class="dropdown-item"><a href="/settings">Поддръжка</a></div>
     <div class="dropdown-item"><a href="/change-password/${user.uid}">Сменяне на парола</a></div>
     <div class="dropdown-item"><a href="/settings">Връщане на домашен любимец</a></div>
     ${isAdmin
             ? html`<div class="dropdown-item"><a href="/add-animal">Добавяне на животно</a></div>`
+            : ""}
+    ${isAdmin 
+        ? html`<div class="dropdown-item"><a href="/adminpanel">Админ панел</a></div>`
             : ""}
     <div class="dropdown-item"><a href="/logout">Изход</a></div>
   </div>
@@ -73,8 +76,6 @@ function navigationTemplate(user) {
                         <a href="/dogs">Кучета</a>
                          <a href="/rabbits">Зайчета</a>
                          <a href="/roddent">Гризачи</a>
-                         <a href="/fishes">Рибки</a>
-                        <a href="#">Други</a>
                     </div>
 
 
@@ -93,10 +94,11 @@ function navigationTemplate(user) {
             </ul>
         </nav>
         <!-- Търсачка по средата -->
-        <div class="search-bar">
-            <input type="text" placeholder="Търсене...">
-            <button type="submit" class="search-button">🔍</button>
-        </div>
+<form id="searchForm" class="search-bar" autocomplete="off">
+  <input type="text" id="searchInput" placeholder="Въведете порода...">
+  <button type="submit" class="search-button">🔍</button>
+  <ul id="suggestions" ></ul>
+</form>
 
         <!-- Навигация и профил вдясно -->
 
