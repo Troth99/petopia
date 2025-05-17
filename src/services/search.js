@@ -15,7 +15,7 @@ async function printAllCategories() {
     const data = doc.data();
     if (data.category) categories.push(data.category);
   });
-  console.log(categories); 
+
 }
 
 printAllCategories();
@@ -27,7 +27,7 @@ async function printAllCatCategories() {
     const data = doc.data();
     if (data.category) categories.push(data.category);
   });
-  console.log(categories); 
+ 
 }
 
 printAllCatCategories();

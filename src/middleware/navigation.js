@@ -31,7 +31,7 @@ function loggedInUser(user) {
   <div class="dropdown-content-menu">
     <div class="dropdown-item"><a href="/profile">Моят профил</a></div>
 
-    <div class="dropdown-item"><a href="/addoptation">Преглед на процес за осиновяване</a></div>
+    <div class="dropdown-item"><a href="/adoptation">Преглед на процес за осиновяване</a></div>
     <div class="dropdown-item"><a href="/settings">Поддръжка</a></div>
     <div class="dropdown-item"><a href="/change-password/${user.uid}">Сменяне на парола</a></div>
     <div class="dropdown-item"><a href="/settings">Връщане на домашен любимец</a></div>

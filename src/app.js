@@ -63,6 +63,8 @@ import showRabbitCategories from "./views/rabbits/rabbitsMainView.js"
 import showAllIndoorRabbits from "./views/rabbits/indoorRabbits.js"
 import showALlMiniRabbits from "./views/rabbits/rabbitsMini.js"
 import showALlGiganticRabbits from "./views/rabbits/giganticRabbits.js"
+import adoptationStatusView, { animalDetailsView } from "./views/addoptationStatus.js"
+import adminPanelView from "./views/adminPanel.js"
 
 
 
@@ -141,4 +143,12 @@ page('/rabbits', showRabbitCategories)
 page('/rabbit/indoor', showAllIndoorRabbits)
 page('/rabbit/mini', showALlMiniRabbits)
 page('/rabbit/gigantic', showALlGiganticRabbits)
+
+//adoptation status
+page('/adoptation', adoptationStatusView)
+page('/animal/:id', animalDetailsView)
+
+
+//admin Panel
+page('/adminpanel', adminPanelView)
 page.start()
