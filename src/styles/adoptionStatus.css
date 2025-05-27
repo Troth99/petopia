@@ -1,0 +1,64 @@
+.adoption-status-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.adoption-status-section h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.adoption-request {
+  background-color: #f7f9fc;
+  border-left: 5px solid #4caf50; /* зелено при одобрена, после ще го променяме */
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.adoption-request:hover {
+  background-color: #e1f5e1;
+}
+
+.adoption-request.rejected {
+  border-left-color: #e74c3c; /* червено за отхвърлени */
+  background-color: #fbeaea;
+}
+
+.adoption-request h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.adoption-request p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+/* Стилове за статуси */
+
+p:contains('Чакаща') {
+    font-weight: bold;
+    color: #ff9800; /* Оранжево - чакаща */
+}
+
+p:contains('Одобрена') {
+    font-weight: bold;
+    color: #4caf50; /* Зелено - одобрена */
+}
+
+p:contains('Отхвърлена') {
+    font-weight: bold;
+    color: #f44336; /* Червено - отхвърлена */
+}

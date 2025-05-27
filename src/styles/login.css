@@ -1,0 +1,97 @@
+.login-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px; /* Максимална ширина на формата */
+  min-height: 700px; /* Минимална височина */
+  margin: 0 auto;
+  padding: 40px; /* Увеличаваме падинга на формата */
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачен фон */
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/cute-kitten-and-puppy-outdoors-in-grass.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Увеличаваме разстоянието между елементите */
+}
+
+/* Заглавие на формата */
+.login-container h2 {
+  font-size: 32px; /* Увеличаваме размера на заглавието */
+  color: white;
+  margin-bottom: 30px; /* Увеличаваме разстоянието под заглавието */
+}
+
+/* Група за входните полета */
+.input-group {
+  text-align: center;
+  margin-bottom: 25px; /* Увеличаваме разстоянието между полетата */
+}
+
+.input-group label {
+  font-size: 16px; /* Увеличаваме размера на етикетите */
+  color: #fff; /* Променяме цвета на етикетите на бяло */
+  display: block;
+  margin-bottom: 10px; /* Увеличаваме разстоянието между етикета и полето */
+}
+
+.input-group input {
+  width: 90%;
+  padding: 15px; /* Увеличаваме падинга на полетата */
+  font-size: 18px; /* Увеличаваме размера на текста в полетата */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: rgba(27, 26, 26, 0.5);
+  caret-color: white;
+  color: white;
+}
+
+/* Фокус върху полетата при натискане */
+.input-group input:focus {
+  border-color: #ff7b00; /* Променяме цвета на границата при фокус */
+}
+
+/* Бутон за вход */
+.submit-btn {
+  width: 100%;
+  padding: 18px;
+  background-color: #ff7b00;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 150px;
+  padding-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #e67000;
+}
+
+/* Линк за регистрация */
+.signup-link {
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+}
+
+.signup-link a {
+  text-decoration: none;
+  color: #e67000;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  color: #e67000;
+}

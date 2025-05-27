@@ -34,7 +34,7 @@ function loggedInUser(user) {
     <div class="dropdown-item"><a href="/adoptation">Преглед на процес за осиновяване</a></div>
     <div class="dropdown-item"><a href="/settings">Поддръжка</a></div>
     <div class="dropdown-item"><a href="/change-password/${user.uid}">Сменяне на парола</a></div>
-    <div class="dropdown-item"><a href="/settings">Връщане на домашен любимец</a></div>
+    <div class="dropdown-item"><a href="/return-pet">Връщане на домашен любимец</a></div>
     ${isAdmin
             ? html`<div class="dropdown-item"><a href="/add-animal">Добавяне на животно</a></div>`
             : ""}
@@ -75,7 +75,6 @@ function navigationTemplate(user) {
                         <a href="/cats">Котки</a>
                         <a href="/dogs">Кучета</a>
                          <a href="/rabbits">Зайчета</a>
-                         <a href="/roddent">Гризачи</a>
                     </div>
 
 

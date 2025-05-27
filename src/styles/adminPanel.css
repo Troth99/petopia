@@ -1,0 +1,40 @@
+.admin-adoptions table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.admin-adoptions th, 
+.admin-adoptions td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.admin-adoptions th {
+  background-color: #2196f3;
+  color: white;
+}
+
+.admin-adoptions tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-adoptions select {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.admin-adoptions button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-adoptions button:hover {
+  background-color: #c0392b;
+}

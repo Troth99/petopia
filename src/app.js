@@ -66,6 +66,8 @@ import showALlGiganticRabbits from "./views/rabbits/giganticRabbits.js"
 import adoptationStatusView, { animalDetailsView } from "./views/addoptationStatus.js"
 import adminPanelView from "./views/adminPanel.js"
 
+import {myAdoptedPets}  from "./views/myPets.js"
+
 
 
 
@@ -151,4 +153,7 @@ page('/animal/:id', animalDetailsView)
 
 //admin Panel
 page('/adminpanel', adminPanelView)
+
+//my Pets
+page('/my-pets', myAdoptedPets)
 page.start()
