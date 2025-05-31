@@ -52,7 +52,7 @@ async function loginSubmitHandler(e) {
 
     let phone = "";
     if (userDoc.exists()) {
-        phone = userDoc.data().phone || ""; // Вземете телефона от Firestore
+        phone = userDoc.data().phone || ""; 
     } else {
         console.warn("Документът за потребителя не съществува в Firestore.");
     }
@@ -60,7 +60,7 @@ async function loginSubmitHandler(e) {
      localStorage.setItem("firebase.user", JSON.stringify({
             email: user.email,
             displayName: user.displayName || "",
-            phone: phone, // Добавяне на телефона
+            phone: phone, 
             uid: user.uid,
             creationTime: user.metadata.creationTime,
             lastSignInTime: user.metadata.lastSignInTime
@@ -70,7 +70,6 @@ async function loginSubmitHandler(e) {
   } catch (error) {
     console.error("Грешка при вход:", error.message);
 
-    // Увери се, че errorMessage е наличен
     const errorMessage = document.getElementById("error-message");
 
     if (errorMessage) {
